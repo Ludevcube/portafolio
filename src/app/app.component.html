@@ -1,11 +1,13 @@
 <!-- app.component.html -->
 <header>
     <app-navbar [pageTitle]="pageTitle" (toggleSidebarEvent)="toggleSidebar()"></app-navbar>
-  </header>
-  <div class="d-flex">
-    <app-sidebar [pageTitle]="pageTitle" *ngIf="isSidebarVisible"></app-sidebar>
-    <main class="flex-grow-1 p-3 main-content" [ngClass]="{'sidebar-open': isSidebarVisible}">
-      <router-outlet></router-outlet>
-    </main>
-  </div>
-  
+</header>
+<div class="d-flex">
+  <app-sidebar [pageTitle]="pageTitle" *ngIf="isSidebarVisible"></app-sidebar>
+  <main class="flex-grow-1 p-3 main-content" [ngClass]="{'sidebar-open': isSidebarVisible}">
+    <router-outlet></router-outlet>
+  </main>
+</div>
+<footer>
+    <app-footer></app-footer>
+</footer>  

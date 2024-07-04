@@ -1,58 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <title>Portfolio</title>
-  <style>
-    body {
-      font-family: sans-serif;
-    }
-    .container {
-      max-width: 800px;
-      margin: 40px auto;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .project {
-      width: 30%;
-      margin: 20px;
-      background-color: #f7f7f7;
-      padding: 20px;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-    }
-    .project img {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 10px 10px 0 0;
-    }
-    .project h3 {
-      margin-top: 0;
-    }
-    .project p {
-      font-size: 16px;
-      color: #666;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <div class="project">
-      <img src="image1.jpg" alt="Project 1">
-      <h3>Desarrollo Web</h3>
-      <p>Trabajando con [Nombre del Cliente] ha sido una gran experiencia. Satisfecho con la idea para los servicios digitales que diseñamos en gobernación de [Nombre del Cliente].</p>
-    </div>
-    <div class="project">
-      <img src="image2.jpg" alt="Project 2">
-      <h3>Programación</h3>
-      <p>Soy un experto en desarrollo web con un enfoque profesional y atención al detalle. Nunca pierdo un toque en todos los sistemas. Consideramos la funcionalidad, la belleza del diseño y la facilidad de uso, para que el cliente esté satisfecho.</p>
-    </div>
-    <div class="project">
-      <img src="image3.jpg" alt="Project 3">
-      <h3>Diseño</h3>
-      <p>La dedicación y creatividad de [Nombre del Cliente] se refleja en cada detalle del trabajo. Excelente conocimiento de las tendencias actuales y la facilidad del cliente.</p>
+  <div class="proyects-container my-5">
+    <h3 class="text-left mb-4"><strong>Portafolio</strong></h3>
+    <div id="portfolioCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="d-flex justify-content-around gap-3"> <!-- Añadir la clase gap-3 aquí -->
+            <div class="project text-center">
+              <div class="img-container">
+                <img src="app/img/miprimeraweb.PNG" alt="Project 1" class="imagen-fluid">
+                <div class="overlay">
+                  <div class="text">Ejemplo</div>
+                </div>
+              </div>
+              <button class="btn botonn btn-primary mt-3" (click)="openLink(1)">Leer más</button>
+              <h3>Desarrollo Web</h3>
+              <p>"Trabajar con Lu ha sido una experiencia increíble. Su habilidad para transformar nuestras ideas en una presencia digital efectiva es inigualable." - Mariana Figueroa</p>
+            </div>
+            <div class="project text-center">
+              <div class="img-container">
+                <img src="app/img/wordpress.PNG" alt="Project 3" class="imagen-fluid">
+                <div class="overlay">
+                  <div class="text">Ejemplo</div>
+                </div>
+              </div>
+              <button class="btn botonn btn-primary mt-3" (click)="openLink(2)">Leer más</button>
+              <h3>Programación</h3>
+              <p>"Lucia superó nuestras expectativas con su profesionalismo y atención al detalle. Nuestro sitio web no solo es hermoso sino también funcional." - Javier Martínez</p>
+            </div>
+            <div class="project text-center">
+              <div class="img-container">
+                <img src="app/img/curriculum.PNG" alt="Mi Primera Web" class="imagen-fluid">
+                <div class="overlay">
+                  <div class="text">Ejemplo</div>
+                </div>
+              </div>
+              <button class="btn botonn btn-primary mt-3" (click)="openLink(3)">Leer más</button>
+              <h3>Diseño</h3>
+              <p>La dedicación y la creatividad de Lu se reflejan en cada detalle de nuestro sitio web. Estamos encantados con el resultado y la facilidad de uso." - Isabella Gómez</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
