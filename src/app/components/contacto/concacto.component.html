@@ -27,19 +27,19 @@
     <div class="right-column">
       <h5><strong>Formulario de Contacto</strong></h5>
       <p class="text-start">¿Listo para comenzar? Completa este formulario y estaré encantada de responderte lo antes posible.</p>
-      <form class="form-container">
+      <form class="form-container" (ngSubmit)="sendMessage()">
         <div class="contenedor">
           <div class="form-group mb-3">
             <label for="nombre" class="form-label">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" class="form-control form-control-lg" placeholder="Tu nombre" required>
+            <input type="text" id="nombre" name="nombre" class="form-control form-control-lg" [(ngModel)]="contact.nombre" placeholder="Tu nombre" required>
           </div>
           <div class="form-group mb-3">
             <label for="email" class="form-label">Correo Electrónico:</label>
-            <input type="email" id="email" name="email" class="form-control form-control-lg" placeholder="Tu correo electrónico" required>
+            <input type="email" id="email" name="email" class="form-control form-control-lg" [(ngModel)]="contact.email" placeholder="Tu correo electrónico" required>
           </div>
           <div class="form-group mb-3">
             <label for="mensaje" class="form-label">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" class="form-control form-control-lg" placeholder="Tu mensaje" rows="4" style="height: 70px;" required></textarea>
+            <textarea id="mensaje" name="mensaje" class="form-control form-control-lg" [(ngModel)]="contact.mensaje" placeholder="Tu mensaje" rows="4" style="height: 70px;" required></textarea>
           </div>
           <div class="d-flex justify-content-end">
             <button type="submit" class="btn boton">Enviar</button>
