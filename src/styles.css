@@ -1,1 +1,268 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+/* ------------------------------------------------------dashboard------------------------------------------------------ */
+body {
+   font-family: 'DM Sans' !important;
+   color: #3B4848 !important;
+   line-height: 1.2 !important;
+}
+
+.cursiva {
+   font-family: 'Mr Dafoe';
+   font-size: 3rem;
+   color: #FF0065;
+   text-align: center;
+   line-height: 0.3;
+}
+
+.text-section .highlight {
+  color: #FF0065;
+  font-weight: bold;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.text-section {
+  padding: 20px;
+  text-align: justify;
+}
+
+.image-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.image-section img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+}
+
+.col-12.col-md-3 {
+  flex: 1 0 0; 
+  padding: 10px;
+}
+
+.col-md-3 {
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.col-md-3 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.boton {
+  background-color: #FF4F63 !important;
+  color: #fff !important;
+  padding: 8px 30px !important;
+  border: none !important;
+  border-radius: 20px !important;
+  cursor: pointer !important;
+  margin-top: 10px !important;
+  text-align: center!important;
+  font-size: 13px !important;
+  margin-left: 20px !important;
+}
+
+.cta:hover {
+  background-color: #e13b56;
+  color: #fff;
+}
+
+.mb-3 {
+  margin-bottom: 1rem;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.divider {
+   border: 0;
+   height: 3px;
+   background: #ddd;
+   margin: 20px 0;
+}
+
+/* ------------------------------------------------------navbar------------------------------------------------------ */
+.navbar {
+  background: linear-gradient(to right, #FFB58A, #FF0065) !important;
+  height: 40px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center; 
+}
+
+.navbar-toggler {
+  padding: 0.25rem 0.5rem; 
+}
+
+.navbar-text {
+  font-size: 1rem; 
+}
+
+.form-control {
+  font-size: 0.75rem; 
+  height: 30px;
+  margin-right: 5px;
+}
+
+.btn-outline-light {
+  height: 30px; 
+  margin: 5px; 
+  max-width: 300px;
+  text-align: center !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+form {
+  display: flex;
+  align-items: center;
+}
+
+/* ------------------------------------------------------sidebar---------------------------------------------------------- */
+.bg-light {
+  background-color: #f8f9fa !important;
+}
+
+.nav-link.active,
+.nav-pills .nav-link.active {
+  background: linear-gradient(45deg, #FFB58A, #ff1654);
+  color: white;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  background: linear-gradient(45deg, #FFB58A, #ff1654) !important;
+  color: white !important;
+}
+
+.nav-link:hover {
+  background-color: #ff80a223;
+  color: #ff1654;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.dropdown-menu {
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 0;
+}
+
+.sidebar-open {
+  width: 280px;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.main-content {
+  transition: margin-left 0.3s ease;
+}
+
+.sidebar-open .main-content {
+  margin-left: 280px;
+}
+
+.nav-link {
+  color: #333;
+}
+
+/* ------------------------------------------------------sobremi---------------------------------------------------------- */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #eee;
+  margin-bottom: 20px;
+}
+
+p {
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* ------------------------------------------------------contacto---------------------------------------------------------- */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px; 
+  margin-top: 50px; 
+}
+
+.contenedor {
+  background-color: #f9f9f9;
+  width: 100%;
+}
+
+.left-column {
+  flex: 1;
+  max-width: 500px; 
+}
+
+.right-column {
+  flex: 1;
+  max-width: 500px; 
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
