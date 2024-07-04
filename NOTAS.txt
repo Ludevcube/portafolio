@@ -1,2 +1,19 @@
 comando para componentes sin css ni archivo de test:
 ng generate component NOMBRE --skip-tests=true --style=css
+
+
+
+subir los cambios.
+generar los archivos con:
+ng build --configuration=production --base-href=/portafolio/
+
+ Cambiar a la rama gh-pages
+ Mover los archivos con:
+ Move-Item -Path dist/portafolio/* -Destination .
+
+ ejecutar esto para agrega los archivos, haz un commit y empuja los cambios a gh-pages:
+git add .
+git commit -m "Actualización de la página con los últimos cambios"
+git push origin gh-pages
+
+Abre tu navegador y visita tu página: https://ludevcube.github.io/portafolio/.
