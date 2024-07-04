@@ -1,2 +1,0 @@
-comando para componentes sin css ni archivo de test:
-ng generate component NOMBRE --skip-tests=true --style=css
