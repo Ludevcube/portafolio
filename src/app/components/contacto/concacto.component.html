@@ -27,7 +27,7 @@
     <div class="right-column">
       <h5><strong>Formulario de Contacto</strong></h5>
       <p class="text-start">¿Listo para comenzar? Completa este formulario y estaré encantada de responderte lo antes posible.</p>
-      <form class="form-container" (ngSubmit)="sendMessage()">
+      <form class="form-container" (ngSubmit)="sendMessage($event)">
         <div class="contenedor">
           <div class="form-group mb-3">
             <label for="nombre" class="form-label">Nombre:</label>

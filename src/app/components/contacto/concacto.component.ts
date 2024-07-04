@@ -13,10 +13,11 @@ export class ConcactoComponent {
     mensaje: ''
   };
 
-  sendMessage() {
+  sendMessage(event: Event) {
+    event.preventDefault();
     const { nombre, email, mensaje } = this.contact;
     const mensajeWhatsApp = `Hola, soy ${nombre} y mi correo electrónico es ${email}. \n\n${mensaje}`;
-    const numeroWhatsApp = '543472433839'; 
+    const numeroWhatsApp = '543472433839';
     const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensajeWhatsApp)}`;
 
     window.open(url, '_blank', 'noopener,noreferrer');
